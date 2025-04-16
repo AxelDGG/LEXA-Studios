@@ -1,0 +1,142 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* Aseguramos que el body ocupe toda la altura */
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.back {
+    padding: 45px 0;
+    background-color:#8A3131;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    height: 70px;
+}
+
+.logo{
+    font-size: 24px;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.logo img{
+    max-height: 70px;
+    width: auto;
+    margin-top: 5px;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+    margin-left: 10px;
+}
+
+.menu .navbar ul li a{
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px ;
+    color: aliceblue !important;
+    display: block !important;
+    background-color: #6f2323;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid black;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+.menu .navbar ul li a:hover{
+    background-color: #ad0000;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+
+    .menu{
+        padding: 30px;
+        
+    }
+    .menu .navbar ul li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+        
+    }
+    .menu .navbar ul li a{
+        margin-top:10px;
+    }
+
+    .menu label{
+        display: initial;
+        
+    }
+
+    .back{
+        padding:57px;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 130%;
+        left: 0;
+        right:0;
+        background-color: rgba(138, 49, 49, 0.8);
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+        pointer-events: none; /* para que no se pueda clicar cuando esté cerrado */
+    }
+    #menu:checked ~ .navbar{
+        max-height: 500px; /* o más si tu menú es alto */
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .logo img{
+        margin-top: 30px;
+    }
+    .menu-icono{
+        width: 50px;
+        height: auto;
+        margin-top: 30px;
+    }
+}
