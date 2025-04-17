@@ -1,0 +1,39 @@
+.contenedor-ods {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #6f2323;
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.contenedor-ods img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.descripcion-texto p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-ods {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .contenedor-ods img {
+        max-width: 60%;
+    }
+
+    .descripcion-texto p {
+        max-width: 100%;
+    }
+}
