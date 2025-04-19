@@ -1,7 +1,9 @@
 /* header.css */
 
 /* 1) Reset básico para todo el header */
-*, ::before, ::after {
+*,
+::before,
+::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -17,9 +19,11 @@ body {
 /* 3) Estructura del nav */
 .nav {
 	position: relative;
-	z-index: 1000;              /* para estar sobre el carrusel */
+	z-index: 1000;
+	/* para estar sobre el carrusel */
 	background-color: rgb(83, 11, 11);
 }
+
 .nav_container {
 	width: min(90%, 1200px);
 	margin: 0 auto;
@@ -31,17 +35,20 @@ body {
 	/* variable para el menú móvil */
 	--transform-menu-show: translateX(-100%);
 }
+
 .nav_container:has(.nav_input:checked) {
 	--transform-menu-show: translateX(0);
 }
 
 /* 4) Logo */
 .nav_figure {
-	z-index: 1001;             /* logo siempre encima del menú */
+	z-index: 1001;
+	/* logo siempre encima del menú */
 }
+
 .nav_figure img {
-    max-height:60px;
-    width: auto;
+	max-height: 60px;
+	width: auto;
 }
 
 
@@ -51,8 +58,10 @@ body {
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
-	z-index: 1001;             /* siempre encima del menú */
+	z-index: 1001;
+	/* siempre encima del menú */
 }
+
 .nav_toggle .imagen-menu {
 	display: block;
 	width: 100%;
@@ -60,6 +69,7 @@ body {
 	object-fit: contain;
 	pointer-events: none;
 }
+
 .nav_toggle .nav_input {
 	position: absolute;
 	top: 0;
@@ -68,7 +78,8 @@ body {
 	height: 100%;
 	opacity: 0;
 	cursor: pointer;
-	z-index: 1002;             /* checkbox encima de todo */
+	z-index: 1002;
+	/* checkbox encima de todo */
 }
 
 /* 6) Menú desplegable (móvil) */
@@ -86,7 +97,8 @@ body {
 	background-color: rgba(83, 11, 11, 0.9);
 	transform: var(--transform-menu-show);
 	transition: transform 0.5s ease;
-	z-index: 1000;             /* justo debajo del header/logo */
+	z-index: 1000;
+	/* justo debajo del header/logo */
 }
 
 /* 7) Estilo de los enlaces dentro del menú */
@@ -95,6 +107,7 @@ body {
 	font-size: 1.2rem;
 	transition: opacity 0.3s;
 }
+
 .nav_link:hover {
 	opacity: 0.7;
 }
@@ -102,6 +115,7 @@ body {
 .nav_link {
 	text-decoration: none !important;
 }
+
 .nav_link:hover,
 .nav_link:focus {
 	text-decoration: none !important;
@@ -113,17 +127,23 @@ body {
 	.nav_toggle {
 		display: none;
 	}
+
 	.nav_list {
-		display: flex;           /* fila */
-		flex-direction: row;     /* refuerzo */
-		justify-content: space-between; /* o center, según el diseño */
-		position: static;        /* ya no fixed */
-		width: auto;             /* que se adapte */
+		display: flex;
+		/* fila */
+		flex-direction: row;
+		/* refuerzo */
+		justify-content: space-between;
+		/* o center, según el diseño */
+		position: static;
+		/* ya no fixed */
+		width: auto;
+		/* que se adapte */
 		height: auto;
 		padding: 0;
 		background: none;
 		transform: none;
 		transition: none;
-        margin-bottom: 0 !important;
+		margin-bottom: 0 !important;
 	}
 }
